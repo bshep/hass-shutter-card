@@ -213,7 +213,7 @@ class ShutterCard extends HTMLElement {
           if ( currentPosition == 50 ) {
             currentPosition = 100;
           } else {
-            currentPosition = (Math.abs(50 - currentPosition) / 50) * 100;
+            currentPosition = (1- (Math.abs(50 - currentPosition) / 50)) * 100;
           }
         }
         if ( state.attributes.current_position != undefined) {
