@@ -208,10 +208,10 @@ class ShutterCard extends HTMLElement {
       
       let currentPosition = 'unknown';
       if (state) {
-        if ( state.attributes.current_tilt_position != "undefined" ) {
+        if ( state.attributes.current_tilt_position != undefined ) {
           currentPosition = state.attributes.current_tilt_position;
         }
-        if ( state.attributes.current_position != "undefined") {
+        if ( state.attributes.current_position != undefined) {
           currentPosition = state.attributes.current_position;
         }
       }
