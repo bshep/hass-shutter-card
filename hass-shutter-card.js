@@ -210,6 +210,11 @@ class ShutterCard extends HTMLElement {
       if (state) {
         if ( state.attributes.current_tilt_position != undefined ) {
           currentPosition = state.attributes.current_tilt_position;
+          if ( currentPosition == 50 ) {
+            currentPosition = 100;
+          } else {
+            currentPosition = (abs(50 - currentPosition) / 50) * 100;
+          }
         }
         if ( state.attributes.current_position != undefined) {
           currentPosition = state.attributes.current_position;
