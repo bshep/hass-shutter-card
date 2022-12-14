@@ -205,6 +205,17 @@ class ShutterCard extends HTMLElement {
         
       const state = hass.states[entityId];
       const friendlyName = (entity && entity.name) ? entity.name : state ? state.attributes.friendly_name : 'unknown';
+      
+      let currentPosition = 'unknown';
+      if (state) {
+        if ( state.attributes.current_tilt_position != "undefined" ) {
+          currentPosition = state.attributes.current_tilt_position;
+        }
+        if ( state.attributes.current_position != "undefined") {
+          currentPosition = state.attributes.current_position;
+        }
+      }
+      
       const currentPosition = state ? state.attributes.current_tilt_position : 'unknown';
       
       shutter.querySelectorAll('.sc-shutter-label').forEach(function(shutterLabel) {
