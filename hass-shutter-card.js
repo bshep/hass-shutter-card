@@ -216,7 +216,7 @@ class ShutterCard extends HTMLElement {
         }
       }
       
-      const currentPosition = state ? state.attributes.current_tilt_position : 'unknown';
+//       const currentPosition = state ? state.attributes.current_tilt_position : 'unknown';
       
       shutter.querySelectorAll('.sc-shutter-label').forEach(function(shutterLabel) {
           shutterLabel.innerHTML = friendlyName;
