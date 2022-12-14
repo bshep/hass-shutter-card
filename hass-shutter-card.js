@@ -205,7 +205,7 @@ class ShutterCard extends HTMLElement {
         
       const state = hass.states[entityId];
       const friendlyName = (entity && entity.name) ? entity.name : state ? state.attributes.friendly_name : 'unknown';
-      const currentPosition = state ? state.attributes.current_position : 'unknown';
+      const currentPosition = state ? state.attributes.current_tilt_position : 'unknown';
       
       shutter.querySelectorAll('.sc-shutter-label').forEach(function(shutterLabel) {
           shutterLabel.innerHTML = friendlyName;
